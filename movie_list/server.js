@@ -52,9 +52,10 @@ function save() {
     const stream = parse({ headers: false });
 
     for (key in Object.keys(list_by_user_id)) {
+        console.log("s");
         for (movie in list_by_user_id[key]) {
-            console.log(key);
-            stream.write(key.toString() + "," + movie.id.toString() + "," + movie.title);
+            console.log(list_by_user_id[key]);
+            stream.write(key + "," + movie.id + "," + movie.title);
         }
     }
     // stringify(list_by_user_id, {
