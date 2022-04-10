@@ -17,6 +17,7 @@ const { Movie, MovieCategory } = require('../commons')
 const { RecommendationResponse, RecommendationRequest } = require('../recommendations/commons')
 
 
+
 let all_caterogies = [MovieCategory.MYSTERY, MovieCategory.COMEDY, MovieCategory.ACTION, MovieCategory.THRILLER, MovieCategory.SCIENCE_FICTION]
 
 let movies_by_category = {};
@@ -109,12 +110,14 @@ setInterval(() => {
 
 
 service.on('request', (rid, key, payload, handler) => {
+
     handler.reply(null, recommend(payload))
 })
 
 
+
 function recommend(request) {
-    all_movies = []
+    let all_movies = []
     if(!all_caterogies.includes(request.category))
     {
         console.error("CATEGORY DOESN'T EXIST");

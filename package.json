@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "fast-csv": "^4.3.6",
+    "grenache-grape": "^0.9.11",
+    "grenache-nodejs-link": "^0.7.12",
+    "grenache-nodejs-ws": "^0.7.10",
+    "jquery-csv": "^1.0.21",
+    "node-csv": "^0.1.2"
+  }
+}
